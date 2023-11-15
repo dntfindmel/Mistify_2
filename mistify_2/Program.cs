@@ -1,15 +1,20 @@
-﻿Music musica1 = new Music();
-musica1.NomeMusica = "Tear In My Heart";
-musica1.Artista = "Twenty One Pilots";
-musica1.Duracao = 308;
-musica1.Disponivel = true;
+﻿Album albumTwentyOnePilots = new Album();
+albumTwentyOnePilots.Nome = "BlurryFace";
 
+Music musica1 = new Music();
+musica1.NomeMusica = "HeavyDirtySoul";
+musica1.Duracao = 235;
 
 Music musica2 = new Music();
-musica2.NomeMusica = "Back to black";
-musica2.Artista = "Amy Winehouse";
-musica2.Duracao = 400;
-musica2.Disponivel = false;
+musica2.NomeMusica = "Stressed Out";
+musica2.Duracao = 203;
 
-musica1.FichaTecnica();
-musica2.FichaTecnica();
+albumTwentyOnePilots.AdicionarMusica(musica1);
+albumTwentyOnePilots.AdicionarMusica(musica2);
+
+albumTwentyOnePilots.ExbirMusicasAlbum();
+
+Banda twentyOnePilots = new Banda();
+twentyOnePilots.Nome = "Twenty One Pilots";
+twentyOnePilots.AdicionarAlbum(albumTwentyOnePilots);
+twentyOnePilots.Discografia();

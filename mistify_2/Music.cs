@@ -1,4 +1,4 @@
-﻿public class Music
+﻿class Music
 {
     public string NomeMusica { get; set;}
     public string Artista { get; set;}
