@@ -1,20 +1,13 @@
-﻿Album albumTwentyOnePilots = new Album();
-albumTwentyOnePilots.Nome = "BlurryFace";
+﻿Episodio ep1 = new(1, "Como conviver com uma mente agitada", 10);
+ep1.AdicionarConvidado("Melyssa");
+ep1.AdicionarConvidado("Nathalie");
 
-Music musica1 = new Music();
-musica1.NomeMusica = "HeavyDirtySoul";
-musica1.Duracao = 235;
 
-Music musica2 = new Music();
-musica2.NomeMusica = "Stressed Out";
-musica2.Duracao = 203;
+Episodio ep2 = new(2, "Lidando com a pressão da perfeição", 15);
+ep2.AdicionarConvidado("Daniel");
+ep2.AdicionarConvidado("Milene");
 
-albumTwentyOnePilots.AdicionarMusica(musica1);
-albumTwentyOnePilots.AdicionarMusica(musica2);
-
-albumTwentyOnePilots.ExbirMusicasAlbum();
-
-Banda twentyOnePilots = new Banda();
-twentyOnePilots.Nome = "Twenty One Pilots";
-twentyOnePilots.AdicionarAlbum(albumTwentyOnePilots);
-twentyOnePilots.Discografia();
+Podcast podcast = new Podcast("Lidando com frustrações", "Sophia");
+podcast.AdicionarEpisodio(ep2);
+podcast.AdicionarEpisodio(ep1);
+podcast.ExibirDetalhes();

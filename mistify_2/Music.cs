@@ -1,7 +1,12 @@
 ﻿class Music
 {
-    public string NomeMusica { get; set;}
-    public string Artista { get; set;}
+    public Music(Banda artista, string nome)
+    {
+        Artista = artista.ToString();
+        NomeMusica = nome;
+    }
+    public string NomeMusica { get; }
+    public string Artista { get; }
     public int Duracao { get; set;}
     public bool Disponivel { get; set;}
 
@@ -13,11 +18,11 @@
         Console.WriteLine($"Duração: {Duracao}");
         if (Disponivel)
         {
-            Console.WriteLine("\nDisponível no plano.");
+            Console.WriteLine("Disponível no plano.");
         }
         else
         {
-            Console.WriteLine("\nAdquira no Plano Magic+");
+            Console.WriteLine("Adquira no Plano Magic+");
         }
     }
 }
